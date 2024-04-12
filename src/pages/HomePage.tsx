@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import TaskList from '../components/TaskList';
 import Typo from '../components/Typo';
 import IconText from '../components/IconText';
+import TaskCounter from '../components/TaskCounter';
 
 import { RiTodoFill } from "react-icons/ri";
 
@@ -27,6 +28,7 @@ const HomePage = () => {
 
   return (
     <div className='h-screen flex flex-col items-center pt-5'>
+      <TaskCounter tasksNumber={3} />
       <IconText>
         <RiTodoFill size='2em' className='text-zinc-900' />
         <Typo type='h1' >

@@ -47,7 +47,7 @@ const TaskList = ({ tasks, handleAddTask, handleDeleteTask }: TaskListProps) => 
       <ContentList>
         {tasks.length > 0 ? (
           tasks.map((taskContent, index) => (
-            <Task taskContent={taskContent} key={index} onDelete={() => handleDeleteTask(index)} />
+            <Task taskContent={taskContent} key={index} id={index} onDelete={() => handleDeleteTask(index)} />
           ))
         ) : (
           <Typo type='p' >
