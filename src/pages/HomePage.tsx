@@ -2,7 +2,7 @@ import TaskList from '../components/TaskList';
 import Typo from '../components/Typo';
 import IconText from '../components/IconText';
 import TaskCounter from '../components/TaskCounter';
-import { TaskInterface } from '../interface/interface';
+import { TaskInterface } from '../interface/task';
 
 import { RiTodoFill } from "react-icons/ri";
 

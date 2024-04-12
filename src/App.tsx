@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 import HomePage from './pages/HomePage'
 import PageLayout from './components/layout/PageLayout'
 import LostPage from './pages/LostPage'
-import { TaskInterface } from './interface/interface'
+import { TaskInterface } from './interface/task'
 
 const App = () => {
 

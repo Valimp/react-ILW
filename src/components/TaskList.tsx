@@ -7,7 +7,7 @@ import Form from './Form';
 import ContentList from './ContentList';
 import { MdAdd } from "react-icons/md";
 import { TiDelete } from "react-icons/ti";
-import { TaskInterface } from '../interface/interface';
+import { TaskInterface } from '../interface/task';
 
 interface FormData {
   taskTitle: string;
