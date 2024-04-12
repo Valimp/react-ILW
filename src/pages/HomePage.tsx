@@ -1,30 +1,19 @@
-import { useState, useEffect } from 'react';
-
 import TaskList from '../components/TaskList';
 import Typo from '../components/Typo';
 import IconText from '../components/IconText';
 import TaskCounter from '../components/TaskCounter';
+import { TaskInterface } from '../interface/interface';
 
 import { RiTodoFill } from "react-icons/ri";
 
-const HomePage = () => {
-  const [tasks, setTasks] = useState<string[]>(() => {
-    const storedTasks = localStorage.getItem('tasks');
-    return storedTasks ? JSON.parse(storedTasks) : [];
-  });
+interface HomePageProps {
+  tasks: TaskInterface[];
+  setTasks: (tasks: TaskInterface[]) => void;
+  handleAddTask: (tasks: TaskInterface) => void;
+  handleDeleteTask: (id: number) => void;
+}
 
-  useEffect(() => {
-    localStorage.setItem('tasks', JSON.stringify(tasks));
-  }, [tasks]);
-
-  const handleAddTask = (taskContent: string) => {
-    setTasks([...tasks, taskContent]);
-  };
-
-  const handleDeleteTask = (index: number) => {
-    const newTasks = tasks.filter((_, i) => i !== index);
-    setTasks(newTasks);
-  }
+const HomePage = ({ tasks, setTasks, handleAddTask, handleDeleteTask}: HomePageProps) => {
 
   return (
     <div className='h-screen flex flex-col items-center pt-5'>
