@@ -11,7 +11,9 @@ interface TaskProps {
 const Task = ({ taskContent, onDelete, id }: TaskProps) => {
   return (
     <li className="flex justify-start items-center bg-zinc-200 shadow-lg rounded-xl p-3 gap-5 w-full">
-      <Typo type='p'>Tâche n°{id+1}</Typo>
+      <div className="mr-auto">
+        <Typo type='p'>n°{id+1}</Typo>
+      </div>
       <div className="w-full overflow-auto">
         <Typo type="h3">{taskContent}</Typo>
       </div>
