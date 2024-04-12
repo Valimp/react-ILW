@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import TaskList from '../components/TaskList';
 import Typo from '../components/Typo';
@@ -7,7 +7,14 @@ import IconText from '../components/IconText';
 import { RiTodoFill } from "react-icons/ri";
 
 const HomePage = () => {
-  const [tasks, setTasks] = useState<string[]>([]);
+  const [tasks, setTasks] = useState<string[]>(() => {
+    const storedTasks = localStorage.getItem('tasks');
+    return storedTasks ? JSON.parse(storedTasks) : [];
+  });
+
+  useEffect(() => {
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+  }, [tasks]);
 
   const handleAddTask = (taskContent: string) => {
     setTasks([...tasks, taskContent]);
