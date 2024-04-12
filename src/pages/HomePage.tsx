@@ -19,7 +19,7 @@ const HomePage = ({ tasks, setTasks, handleAddTask, handleDeleteTask}: HomePageP
       <IconText>
         <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Yawning%20Face.png" alt="Yawning Face" width="40" height="40" />
         <Typo type='h1' >
-          Listes des corvées..
+          Liste des corvées..
         </Typo>
         <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Thinking%20Face.png" alt="Thinking Face" width="40" height="40" />
       </IconText>
