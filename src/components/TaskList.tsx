@@ -28,7 +28,6 @@ const TaskList = ({ tasks, handleAddTask, handleDeleteTask, setTasks }: TaskList
     e.preventDefault();
     if (!formData.taskTitle) return;
     if (formData.taskTitle.length > 80) return;
-    // format the taskContent
     const formattedTaskTitle = formData.taskTitle.trim().toLowerCase();
     const formattedTaskContent = formData.taskContent.trim();
     const newTask: TaskInterface = { content: formattedTaskContent, title: formattedTaskTitle, isCompleted: false};
