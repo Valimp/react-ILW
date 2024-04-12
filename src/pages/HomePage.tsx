@@ -28,7 +28,7 @@ const HomePage = () => {
 
   return (
     <div className='h-screen flex flex-col items-center pt-5'>
-      <TaskCounter tasksNumber={3} />
+      <TaskCounter tasksNumber={tasks.length} />
       <IconText>
         <RiTodoFill size='2em' className='text-zinc-900' />
         <Typo type='h1' >
