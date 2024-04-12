@@ -29,7 +29,9 @@ const TaskList = ({ tasks, handleAddTask, handleDeleteTask }: TaskListProps) => 
     if (!formData.taskContent) return;
     if (tasks.includes(formData.taskContent)) return;
     if (formData.taskContent.length > 55) return;
-    handleAddTask(formData.taskContent);
+    // format the taskContent
+    const formattedTaskContent = formData.taskContent.trim().toLowerCase();
+    handleAddTask(formattedTaskContent);
     setFormData({ taskContent: '' });
   };
 
