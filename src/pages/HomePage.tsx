@@ -4,8 +4,6 @@ import IconText from '../components/IconText';
 import TaskCounter from '../components/TaskCounter';
 import { TaskInterface } from '../interface/task';
 
-import { RiTodoFill } from "react-icons/ri";
-
 interface HomePageProps {
   tasks: TaskInterface[];
   setTasks: (tasks: TaskInterface[]) => void;
@@ -19,10 +17,11 @@ const HomePage = ({ tasks, setTasks, handleAddTask, handleDeleteTask}: HomePageP
     <div className='h-screen flex flex-col items-center pt-5'>
       <TaskCounter tasksNumber={tasks.length} />
       <IconText>
-        <RiTodoFill size='2em' className='text-zinc-900' />
+        <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Yawning%20Face.png" alt="Yawning Face" width="40" height="40" />
         <Typo type='h1' >
-          Gestionnaire de tâches by Valimp
+          Listes des corvées..
         </Typo>
+        <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Thinking%20Face.png" alt="Thinking Face" width="40" height="40" />
       </IconText>
       <TaskList tasks={tasks} setTasks={setTasks} handleAddTask={handleAddTask} handleDeleteTask={handleDeleteTask} />
     </div>
