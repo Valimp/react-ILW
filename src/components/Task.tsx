@@ -9,11 +9,11 @@ interface TaskProps {
 
 const Task = ({ taskContent, onDelete }: TaskProps) => {
   return (
-    <li className="flex justify-between items-center bg-zinc-200 shadow rounded-xl p-3 gap-5 w-full">
+    <li className="flex justify-between items-center bg-zinc-200 shadow-lg rounded-xl p-3 gap-5 w-full">
       <Typo type="h3">{taskContent}</Typo>
       <Button use="delete" onClick={onDelete}>
         <FaTrash />
-        Supprimer
+        <span className="font-semibold lowercase">supprimer</span>
       </Button>
     </li>
   );

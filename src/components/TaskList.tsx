@@ -28,7 +28,7 @@ const TaskList = ({ tasks, handleAddTask, handleDeleteTask }: TaskListProps) => 
     e.preventDefault();
     if (!formData.taskContent) return;
     if (tasks.includes(formData.taskContent)) return;
-    if (formData.taskContent.length > 55) return;
+    if (formData.taskContent.length > 80) return;
     // format the taskContent
     const formattedTaskContent = formData.taskContent.trim().toLowerCase();
     handleAddTask(formattedTaskContent);
@@ -41,7 +41,7 @@ const TaskList = ({ tasks, handleAddTask, handleDeleteTask }: TaskListProps) => 
         <FormInput value={formData.taskContent} onChange={handleChange} />
         <Button use='add' type='submit'>
           <MdAdd size='1.5em' className='' />
-          Ajouter
+          <span className='font-semibold lowercase'>ajouter</span>
         </Button>
       </Form>
       <ContentList>
