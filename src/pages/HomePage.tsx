@@ -32,10 +32,10 @@ const HomePage = () => {
       <IconText>
         <RiTodoFill size='2em' className='text-zinc-900' />
         <Typo type='h1' >
-          Tasks
+          Gestionnaire de tâches by Valimp
         </Typo>
       </IconText>
-      <TaskList tasks={tasks} handleAddTask={handleAddTask} handleDeleteTask={handleDeleteTask} />
+      <TaskList tasks={tasks} setTasks={setTasks} handleAddTask={handleAddTask} handleDeleteTask={handleDeleteTask} />
     </div>
   );
 };

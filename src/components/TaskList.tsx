@@ -6,6 +6,7 @@ import Button from './Button';
 import Form from './Form';
 import ContentList from './ContentList';
 import { MdAdd } from "react-icons/md";
+import { TiDelete } from "react-icons/ti";
 
 interface FormData {
   taskContent: string;
@@ -13,11 +14,12 @@ interface FormData {
 
 interface TaskListProps {
   tasks: string[];
+  setTasks: (tasks: string[]) => void;
   handleAddTask: (taskContent: string) => void;
   handleDeleteTask: (index: number) => void;
 }
 
-const TaskList = ({ tasks, handleAddTask, handleDeleteTask }: TaskListProps) => {
+const TaskList = ({ tasks, handleAddTask, handleDeleteTask, setTasks }: TaskListProps) => {
   const [formData, setFormData] = useState<FormData>({ taskContent: '' });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -41,7 +43,11 @@ const TaskList = ({ tasks, handleAddTask, handleDeleteTask }: TaskListProps) => 
         <FormInput value={formData.taskContent} onChange={handleChange} />
         <Button use='add' type='submit'>
           <MdAdd size='1.5em' className='' />
-          <span className='font-semibold lowercase'>ajouter</span>
+          <span className='font-semibold lowercase lg:inline-block hidden'>ajouter</span>
+        </Button>
+        <Button use='delete' onClick={() => setTasks([])}>
+          <TiDelete size='1.5em' className='' />
+          <span className='font-semibold lowercase whitespace-nowrap lg:inline-block hidden'>supprimer tout</span>
         </Button>
       </Form>
       <ContentList>
