@@ -29,11 +29,11 @@ const Task = ({ taskTitle, taskContent, onDelete, id }: TaskProps) => {
       <div className="flex flex-col ml-auto gap-1">
         <Button use="validate" onClick={onDelete}>
           <FaCheck />
-          <span className="font-semibold lowercase lg:inline-block hidden">valider</span>
+          <span className="font-semibold lowercase lg:inline-block hidden">je me suis chauffer</span>
         </Button>
         <Button use="delete" onClick={onDelete}>
           <FaRegTrashAlt />
-          <span className="font-semibold lowercase lg:inline-block hidden">supprimer</span>
+          <span className="font-semibold lowercase lg:inline-block hidden">mettre sous le tapis</span>
         </Button>
       </div>
     </li>

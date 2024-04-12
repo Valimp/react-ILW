@@ -50,11 +50,11 @@ const TaskList = ({ tasks, handleAddTask, handleDeleteTask, setTasks }: TaskList
         <FormInput value={formData.taskContent} onChange={handleContentChange} placeholder='Contenu...' />
         <Button use='add' type='submit'>
           <MdAdd size='1.5em' className='' />
-          <span className='font-semibold lowercase lg:inline-block hidden'>ajouter</span>
+          <span className='font-semibold lowercase lg:inline-block hidden'>ajouter..</span>
         </Button>
         <Button use='delete' onClick={() => setTasks([])}>
           <TiDelete size='1.5em' className='' />
-          <span className='font-semibold lowercase whitespace-nowrap lg:inline-block hidden'>supprimer tout</span>
+          <span className='font-semibold lowercase whitespace-nowrap lg:inline-block hidden'>j'ai tout fait</span>
         </Button>
       </Form>
       <ContentList>
@@ -64,7 +64,7 @@ const TaskList = ({ tasks, handleAddTask, handleDeleteTask, setTasks }: TaskList
           ))
         ) : (
           <Typo type='p' >
-            Aucune tâche à afficher
+            Aucune corvée à afficher
           </Typo>
         )}
       </ContentList>
